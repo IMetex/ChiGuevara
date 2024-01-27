@@ -1,36 +1,50 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     // Hareket hızı
     public float moveSpeed = 5f;
-    
+
     // Zıplama kuvveti
     public float jumpForce = 10f;
-    
+
     // Zemin kontrolü için boş bir GameObject kullanın
     public Transform groundCheck;
-    
+
     // Zeminin layer'ı
     public LayerMask groundLayer;
-    
+
     // Ateş etme başlangıç noktası
     public Transform firePoint;
-    
+
     // Ateş mermisi prefab'ı
     public GameObject bulletPrefab;
 
     // Zeminde mi kontrolü
     private bool isGrounded;
-    
+
     // Double jump yapabilir mi kontrolü
     private bool canDoubleJump;
-    
+
+    // Dash yapılıyor mu kontrolü
+    private bool isDashing;
+
+    // Dash kuvveti
+    public float dashForce = 20f;
+
+    // Dash süresi
+    public float dashDuration = 0.2f;
+
+    // Dash cooldown süresi
+    public float dashCooldown = 2f;
+
+    // Dash cooldown süresini takip eden timer
+    private float dashCooldownTimer;
+
     // Animator component'ini tutmak için
     private Animator animator;
-    
+
     // Fiziksel özellikleri kontrol etmek için
     private Rigidbody rb;
 
@@ -39,13 +53,16 @@ public class PlayerController : MonoBehaviour
     {
         // Çift zıplama kontrolünü başlangıçta true olarak ayarla
         canDoubleJump = true;
-        
+
+        // Dash cooldown süresini başlangıçta sıfırla
+        dashCooldownTimer = 0f;
+
         // Animator component'ini al
         animator = GetComponent<Animator>();
-        
+
         // Fiziksel özellikleri kontrol etmek için Rigidbody component'ini al
         rb = GetComponent<Rigidbody>();
-        
+
         // Çift zıplama animasyonunu sıfırla
         animator.SetBool("IsDoubleJumping", false);
     }
@@ -86,6 +103,18 @@ public class PlayerController : MonoBehaviour
         {
             Shoot();
         }
+
+        // Dash
+        if (Input.GetButtonDown("Dash") && !isDashing && dashCooldownTimer <= 0f)
+        {
+            StartCoroutine(Dash());
+        }
+
+        // Dash cooldown süresini güncelle
+        if (dashCooldownTimer > 0f)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
     }
 
     // Zıplama işlemi
@@ -101,11 +130,11 @@ public class PlayerController : MonoBehaviour
     {
         // Çift zıplama animasyonunu oynat
         animator.SetBool("IsDoubleJumping", true);
-        
+
         // Zıplama hızını sıfırla ve zıplama kuvvetini uygula
         rb.velocity = new Vector3(rb.velocity.x, 0f, 0f);
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        
+
         // Çift zıplama yeteneğini kapat
         canDoubleJump = false;
     }
@@ -115,5 +144,22 @@ public class PlayerController : MonoBehaviour
     {
         // Ateş mermisini oluştur ve ateş etme noktasına yerleştir
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    // Dash işlemi
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        float dashTime = 0f;
+
+        while (dashTime < dashDuration)
+        {
+            rb.velocity = new Vector3(transform.localScale.x * dashForce, rb.velocity.y);
+            dashTime += Time.deltaTime;
+            yield return null;
+        }
+
+        isDashing = false;
+        dashCooldownTimer = dashCooldown;
     }
 }
