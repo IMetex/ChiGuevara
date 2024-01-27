@@ -1,165 +1,94 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Hareket hızı
     public float moveSpeed = 5f;
-
-    // Zıplama kuvveti
     public float jumpForce = 10f;
+    private bool isJumping = false;
+    private int jumpCount = 0;
+    public GameObject bulletPrefab; // Ateş objesi prefab'ı
+    public float bulletLifetime = 1f; // Ateş objesinin ömrü
 
-    // Zemin kontrolü için boş bir GameObject kullanın
-    public Transform groundCheck;
+    public float minYPosition = -5f; // Alt sınır
+    public float destroyYPosition = -1f; // Ateş objesinin yok olacağı y pozisyonu
 
-    // Zeminin layer'ı
-    public LayerMask groundLayer;
-
-    // Ateş etme başlangıç noktası
-    public Transform firePoint;
-
-    // Ateş mermisi prefab'ı
-    public GameObject bulletPrefab;
-
-    // Zeminde mi kontrolü
-    private bool isGrounded;
-
-    // Double jump yapabilir mi kontrolü
-    private bool canDoubleJump;
-
-    // Dash yapılıyor mu kontrolü
-    private bool isDashing;
-
-    // Dash kuvveti
-    public float dashForce = 20f;
-
-    // Dash süresi
-    public float dashDuration = 0.2f;
-
-    // Dash cooldown süresi
-    public float dashCooldown = 2f;
-
-    // Dash cooldown süresini takip eden timer
-    private float dashCooldownTimer;
-
-    // Animator component'ini tutmak için
-    private Animator animator;
-
-    // Fiziksel özellikleri kontrol etmek için
-    private Rigidbody rb;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Çift zıplama kontrolünü başlangıçta true olarak ayarla
-        canDoubleJump = true;
-
-        // Dash cooldown süresini başlangıçta sıfırla
-        dashCooldownTimer = 0f;
-
-        // Animator component'ini al
-        animator = GetComponent<Animator>();
-
-        // Fiziksel özellikleri kontrol etmek için Rigidbody component'ini al
-        rb = GetComponent<Rigidbody>();
-
-        // Çift zıplama animasyonunu sıfırla
-        animator.SetBool("IsDoubleJumping", false);
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        // Zeminde olup olmadığını kontrol et
-        isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
-
-        // Yatay hareket
+        // Sağa ve sola hareket
         float horizontalInput = Input.GetAxis("Horizontal");
-        Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
-        transform.Translate(movement * moveSpeed * Time.deltaTime);
-
-        // Zıplama
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (isGrounded)
-            {
-                Jump();
-            }
-            else if (canDoubleJump)
-            {
-                Jump();
-                canDoubleJump = false;
-            }
-        }
-
-        // Çift zıplama animasyonu
-        if (Input.GetButtonDown("Jump") && !isGrounded && canDoubleJump)
-        {
-            DoubleJump();
-        }
+        Vector2 moveDirection = new Vector2(horizontalInput, 0f);
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
 
         // Ateş etme
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Shoot();
+            Fire();
         }
 
-        // Dash
-        if (Input.GetButtonDown("Dash") && !isDashing && dashCooldownTimer <= 0f)
+        // Havalanma
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            StartCoroutine(Dash());
+            if (jumpCount < 2)
+            {
+                Jump();
+                jumpCount++;
+            }
         }
 
-        // Dash cooldown süresini güncelle
-        if (dashCooldownTimer > 0f)
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            dashCooldownTimer -= Time.deltaTime;
+            isJumping = false;
+        }
+
+        // Alt sınıra ulaşıldığında düşmeyi engelleme
+        if (transform.position.y < minYPosition)
+        {
+            transform.position = new Vector2(transform.position.x, minYPosition);
+            if (isJumping)
+            {
+                isJumping = false;
+                jumpCount = 0;
+            }
         }
     }
 
-    // Zıplama işlemi
     void Jump()
     {
-        // Zıplama hızını sıfırla ve zıplama kuvvetini uygula
-        rb.velocity = new Vector3(rb.velocity.x, 0f, 0f);
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-
-    // Çift zıplama işlemi
-    void DoubleJump()
-    {
-        // Çift zıplama animasyonunu oynat
-        animator.SetBool("IsDoubleJumping", true);
-
-        // Zıplama hızını sıfırla ve zıplama kuvvetini uygula
-        rb.velocity = new Vector3(rb.velocity.x, 0f, 0f);
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-        // Çift zıplama yeteneğini kapat
-        canDoubleJump = false;
-    }
-
-    // Ateş etme işlemi
-    void Shoot()
-    {
-        // Ateş mermisini oluştur ve ateş etme noktasına yerleştir
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    }
-
-    // Dash işlemi
-    IEnumerator Dash()
-    {
-        isDashing = true;
-        float dashTime = 0f;
-
-        while (dashTime < dashDuration)
+        if (!isJumping)
         {
-            rb.velocity = new Vector3(transform.localScale.x * dashForce, rb.velocity.y);
-            dashTime += Time.deltaTime;
-            yield return null;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jumpForce);
+            isJumping = true;
         }
+    }
 
-        isDashing = false;
-        dashCooldownTimer = dashCooldown;
+    void Fire()
+    {
+        // Ateş objesini oyuncunun altında oluştur
+        Vector2 spawnPosition = new Vector2(transform.position.x, Mathf.Max(transform.position.y - 1f, minYPosition));
+        GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+
+        // Ateş objesinin belirli bir süre sonra yok olması için Invoke fonksiyonu kullanılır
+        Invoke("DestroyBullet", bulletLifetime);
+    }
+
+    // Zeminle temas ettiğinde ateş objesini yok et
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            DestroyBullet(collision.gameObject);
+            print("buldu");
+            jumpCount = 0; // Yere temas ettiğinde jumpCount sıfırlanır
+        }
+    }
+
+    // Ateş objesini yok etme fonksiyonu
+    public void DestroyBullet(GameObject bullet)
+    {
+        // Eğer obje hala varsa ve y pozisyonu destroyYPosition'dan küçükse, objeyi yok et
+        if (bullet != null && bullet.transform.position.y < destroyYPosition)
+        {
+            Destroy(bullet);
+        }
     }
 }
