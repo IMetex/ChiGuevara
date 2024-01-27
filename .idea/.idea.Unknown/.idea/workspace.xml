@@ -5,39 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a19bd7-5580-4dc9-ab6c-48286a12b36c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Audio.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Audio/Compressed.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Audio/Compressed.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Audio/Uncompressed.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Audio/Uncompressed.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Font.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Font/LuckiestGuy-Regular SDF.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Font/LuckiestGuy-Regular SDF.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Font/LuckiestGuy-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Font/LuckiestGuy-Regular.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/ClickButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/ClickButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/MainPageController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/MainPageController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/Scroller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/Scroller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Panel Plant Deco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Panel Plant Deco.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Panel.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Play Button - Compressed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Play Button - Compressed.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Play Button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Play Button.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Tarodev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Tarodev.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/MeteTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/MeteTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/RangeEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/RangeEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
