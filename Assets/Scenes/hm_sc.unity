@@ -226,9 +226,8 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 10
   bulletPrefab: {fileID: 3525648277932263446, guid: 94bb14f410679fd42aebb59c8e2be5f7, type: 3}
-  bulletLifetime: 3
-  minYPosition: -2
-  destroyYPosition: -2
+  firePoint: {fileID: 1353021511}
+  fireCooldown: 0.5
 --- !u!50 &373287449
 Rigidbody2D:
   serializedVersion: 4
@@ -255,7 +254,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &373287450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ GameObject:
   - component: {fileID: 928173203}
   m_Layer: 0
   m_Name: graundCheck
-  m_TagString: Graund
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
