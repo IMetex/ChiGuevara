@@ -153,7 +153,7 @@ RectTransform:
   m_GameObject: {fileID: 22383309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.106226, y: 1.06153, z: 0.89392}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2055248075}
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "_\u0131mage": {fileID: 22383312}
-  _default: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  _pressed: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!1 &54174207
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move Right   :  D'
+  m_text: 'Move Right   :  Right Arrow'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
   m_sharedMaterial: {fileID: 8974086252252317402, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Jump                  :  Space'
+  m_text: 'Jump                  :  Up Arrow'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
   m_sharedMaterial: {fileID: 8974086252252317402, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controller
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
   m_sharedMaterial: {fileID: 8974086252252317402, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
@@ -2474,15 +2474,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.8460207, a: 1}
+  m_Color: {r: 0.3388933, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2608,8 +2608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "_\u0131mage": {fileID: 1318139970}
-  _default: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  _pressed: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!1 &1405371036
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move Left      :  A'
+  m_text: 'Move Left      :  Left Arrow'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
   m_sharedMaterial: {fileID: 8974086252252317402, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
@@ -3945,15 +3945,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.15717925, b: 0.14528298, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4079,8 +4079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "_\u0131mage": {fileID: 1889066408}
-  _default: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  _pressed: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!1 &1908780172
@@ -4361,8 +4361,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4488,8 +4488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "_\u0131mage": {fileID: 2011346826}
-  _default: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
-  _pressed: {fileID: 21300000, guid: e3db6871099e49042b5af8c2d0d16297, type: 3}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!1 &2055248074
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controller
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
   m_sharedMaterial: {fileID: 8974086252252317402, guid: 4dbfeb0f219ec43468d3664a696a7e35, type: 2}
