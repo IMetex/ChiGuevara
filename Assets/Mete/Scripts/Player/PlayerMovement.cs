@@ -1,69 +1,149 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
-namespace Mete.Scripts.Player
+public class PlayerMovement : MonoBehaviour
 {
-    public class PlayerMovement : MonoBehaviour
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public float dashSpeed = 15f; // Dash hızı
+    public float dashDuration = 0.2f; // Dash süresi
+    private bool isJumping = false;
+    private int jumpCount = 0;
+    private bool canDash = true; // Dash yapma izni kontrolü
+    public GameObject bulletPrefab; // Ateş objesi prefab'ı
+    public float minYPosition = -5f; // Alt sınır
+
+    private bool canFire = true; // Fire yapma izni kontrolü
+    private Animator _animator;
+    public SpriteRenderer sprite;
+    public Transform _spawnPos;
+    public float attackCooldown;
+
+    private void Start()
     {
-        [SerializeField] private float speed;
-        [SerializeField] private float jumpPower;
-        [SerializeField] private LayerMask groundLayer;
-        private Rigidbody2D _rigidbody2D;
-        private Animator _animator;
-        private BoxCollider2D _boxCollider;
-        private float _horizontalInput;
+        _animator = GetComponentInChildren<Animator>();
+    }
 
-        private void Awake()
+    void Update()
+    {
+        // Sağa ve sola hareket
+        float horizontalInput = Input.GetAxis("Horizontal");
+        Vector2 moveDirection = new Vector2(horizontalInput, 0f);
+
+        if (horizontalInput > 0 || horizontalInput < 0)
         {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-            _animator = GetComponentInChildren<Animator>();
-            _boxCollider = GetComponent<BoxCollider2D>();
+            // Sprite left and right move
+            sprite.flipX = horizontalInput < 0 ? true : false;
+            _animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            // Idle Animation
+            _animator.SetBool("IsMoving", false);
         }
 
-        private void Update()
+        // Dash kontrolü
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            _horizontalInput = Input.GetAxisRaw("Horizontal");
-            _animator.SetBool("IsMoving", _horizontalInput != 0);
-            Flip();
-            
-            if (Input.GetKey(KeyCode.Space))
-                Jump();
+            StartCoroutine(Dash());
         }
 
-        private void Flip()
-        {
-            if (_horizontalInput > 0.01f)
-                transform.localScale = Vector3.one;
-            else if (_horizontalInput < -0.01f)
-                transform.localScale = new Vector3(-1, 1, 1);
-        }
+        // Normal hareket veya dash hareketi
+        float currentMoveSpeed = canDash ? dashSpeed : moveSpeed;
+        transform.Translate(moveDirection * (currentMoveSpeed * Time.deltaTime));
 
-        private void Jump()
+        // Ateş etme
+        if (Input.GetKey(KeyCode.Space) && canFire)
         {
-            if (isGrounded())
+            // Yatay gidişatı belirle (sağa veya sola)
+            float bulletDirection = 0f;
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpPower);
-                //anim.SetTrigger("jump");
+                bulletDirection = -1f; // Sola ateş et
+                _animator.SetTrigger("IsAttack");
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                bulletDirection = 1f; // Sağa ateş et
+                _animator.SetTrigger("IsAttack");
+            }
+
+            if (bulletDirection != 0f)
+            {
+                Fire(bulletDirection);
+                canFire = false; // Fire yapıldığında izni kapat
+
+                // 0.5 saniye sonra izni tekrar aç
+                Invoke("EnableFire", attackCooldown);
             }
         }
 
-        private void FixedUpdate()
+        // Havalanma
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount < 2)
         {
-            _rigidbody2D.velocity = new Vector2(_horizontalInput * speed * Time.fixedDeltaTime,
-                _rigidbody2D.velocity.y);
+            Jump();
+            _animator.SetTrigger("Jump");
+            jumpCount++;
         }
 
-        private bool isGrounded()
+        // Alt sınıra ulaşıldığında düşmeyi engelleme
+        if (transform.position.y < minYPosition)
         {
-            RaycastHit2D raycastHit = Physics2D.BoxCast(
-                _boxCollider.bounds.center, _boxCollider.bounds.size,
-                0, Vector2.down, 0.1f, groundLayer);
-            return raycastHit.collider != null;
+            transform.position = new Vector2(transform.position.x, minYPosition);
+            if (isJumping)
+            {
+                isJumping = false;
+                jumpCount = 0;
+            }
         }
+    }
+
+    void Jump()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0f, jumpForce);
+        isJumping = true;
+    }
+
+    void Fire(float bulletDirection)
+    {
         
-        public bool canAttack()
+        GameObject bullet = Instantiate(bulletPrefab, _spawnPos.position, Quaternion.identity);
+        BulletScript bulletScript = bullet.GetComponent<BulletScript>();
+
+        // Ateş objesini belirli bir yönde hareket ettir
+        bulletScript.SetDirection(bulletDirection);
+    }
+
+    void EnableFire()
+    {
+        canFire = true; // Fire iznini aç
+    }
+
+    // Zeminle temas ettiğinde
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Graund"))
         {
-            return _horizontalInput == 0 && isGrounded();
+            isJumping = false;
+            jumpCount = 0;
         }
+    }
+
+    IEnumerator Dash()
+    {
+        canDash = false; // Dash iznini kapat
+        float originalSpeed = moveSpeed; // Orijinal hareket hızını sakla
+
+        // Dash süresince hızı arttır
+        moveSpeed = dashSpeed;
+
+        // Dash süresi boyunca beklet
+        yield return new WaitForSeconds(dashDuration);
+
+        // Dash sona erdiğinde hızı eski değerine geri getir
+        moveSpeed = originalSpeed;
+
+        canDash = true; // Dash iznini aç
     }
 }

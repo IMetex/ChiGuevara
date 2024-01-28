@@ -1,3 +1,4 @@
+using Mete.Scripts.Enemy;
 using UnityEngine;
 
 namespace Mete.Scripts
@@ -26,12 +27,12 @@ namespace Mete.Scripts
         //Referances
         private Animator _anim;
         private Health.Health playerHealth;
-        private EnemyPatrol enemyPatrol;
+        private EnemyFollow _enemy;
 
         private void Awake()
         {
             _anim = GetComponent<Animator>();
-            enemyPatrol = GetComponentInParent<EnemyPatrol>();
+            _enemy = GetComponent<EnemyFollow>();
         }
 
         private void Update()
@@ -45,12 +46,14 @@ namespace Mete.Scripts
                 {
                     _cooldownTimer = 0;
                     _anim.SetTrigger("IsMeleAttack");
+                    _anim.SetBool("IsMoving",false);
                     Debug.Log("Work");
                 }
+                
             }
 
-            /*if (enemyPatrol != null)
-                enemyPatrol.enabled = !PlayerInSight();*/
+            _enemy.enabled = !PlayerInSight();
+
         }
 
         private bool PlayerInSight()
