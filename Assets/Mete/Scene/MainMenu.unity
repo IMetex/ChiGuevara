@@ -1506,9 +1506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357fc050ae34d994199bd99793642c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "_\u0131mage": {fileID: 0}
-  _default: {fileID: 0}
-  _pressed: {fileID: 0}
+  "_\u0131mage": {fileID: 743077738}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!82 &743077736
@@ -3114,9 +3114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357fc050ae34d994199bd99793642c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "_\u0131mage": {fileID: 0}
-  _default: {fileID: 0}
-  _pressed: {fileID: 0}
+  "_\u0131mage": {fileID: 1435919000}
+  _default: {fileID: 21300000, guid: 0d1c85507655f3048b41c3988be98135, type: 3}
+  _pressed: {fileID: 21300000, guid: c566318e2f4c160459b3a08fc97ba5a6, type: 3}
   _compressClip: {fileID: 8300000, guid: 7f174d5c0ffcf804cba3433ad07ada2d, type: 3}
   _uncompressClip: {fileID: 8300000, guid: c62511c0f45575c4ca23dc47b6bb7693, type: 3}
 --- !u!1 &1449327659
