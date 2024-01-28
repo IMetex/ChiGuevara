@@ -90,6 +90,8 @@ public class PlayerController : MonoBehaviour
 
         // Ateş objesini belirli bir yönde hareket ettir
         bulletScript.SetDirection(bulletDirection);
+        Destroy(bullet, 5f);
+
     }
 
     void EnableFire()
