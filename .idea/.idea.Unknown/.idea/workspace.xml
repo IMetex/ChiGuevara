@@ -5,8 +5,364 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a19bd7-5580-4dc9-ab6c-48286a12b36c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground/GroundCheck.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground/GroundCheck.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerShooter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerShooter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/Projectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/Projectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/Map.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/Map/Grass.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/Map/Grass.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/Map/New Palette.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/Map/New Palette.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_10.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_10.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_100.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_100.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_101.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_101.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_102.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_102.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_103.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_103.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_104.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_104.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_105.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_105.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_106.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_106.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_107.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_107.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_108.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_108.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_109.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_109.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_11.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_11.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_110.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_110.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_111.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_111.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_112.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_112.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_113.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_113.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_114.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_114.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_115.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_115.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_116.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_116.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_117.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_117.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_118.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_118.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_119.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_119.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_12.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_12.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_120.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_120.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_121.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_121.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_122.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_122.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_123.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_123.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_124.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_124.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_125.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_125.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_126.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_126.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_127.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_127.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_128.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_128.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_129.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_129.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_13.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_13.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_130.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_130.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_131.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_131.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_132.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_132.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_133.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_133.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_134.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_134.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_135.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_135.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_136.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_136.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_137.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_137.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_138.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_138.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_139.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_139.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_14.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_14.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_140.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_140.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_141.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_141.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_142.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_142.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_143.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_143.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_144.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_144.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_145.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_145.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_146.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_146.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_147.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_147.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_148.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_148.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_149.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_149.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_15.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_15.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_150.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_150.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_151.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_151.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_152.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_152.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_153.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_153.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_154.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_154.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_155.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_155.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_156.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_156.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_157.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_157.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_158.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_158.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_159.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_159.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_16.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_16.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_160.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_160.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_161.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_161.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_162.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_162.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_163.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_163.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_17.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_17.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_18.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_18.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_19.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_19.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_20.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_20.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_21.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_21.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_22.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_22.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_23.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_23.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_24.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_24.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_25.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_25.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_26.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_26.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_27.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_27.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_28.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_28.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_29.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_29.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_30.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_30.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_31.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_31.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_32.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_32.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_33.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_33.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_34.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_34.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_35.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_35.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_36.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_36.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_37.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_37.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_38.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_38.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_39.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_39.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_40.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_40.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_41.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_41.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_42.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_42.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_43.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_43.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_44.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_44.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_45.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_45.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_46.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_46.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_47.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_47.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_48.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_48.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_49.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_49.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_5.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_50.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_50.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_51.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_51.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_52.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_52.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_53.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_53.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_54.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_54.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_55.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_55.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_56.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_56.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_57.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_57.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_58.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_58.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_59.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_59.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_6.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_6.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_60.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_60.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_61.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_61.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_62.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_62.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_63.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_63.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_64.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_64.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_65.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_65.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_66.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_66.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_67.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_67.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_68.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_68.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_69.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_69.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_7.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_7.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_70.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_70.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_71.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_71.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_72.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_72.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_73.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_73.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_74.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_74.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_75.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_75.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_76.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_76.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_77.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_77.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_78.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_78.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_79.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_79.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_8.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_8.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_80.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_80.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_81.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_81.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_82.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_82.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_83.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_83.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_84.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_84.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_85.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_85.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_86.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_86.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_87.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_87.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_88.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_88.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_89.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_89.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_9.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_9.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_90.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_90.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_91.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_91.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_92.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_92.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_93.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_93.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_94.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_94.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_95.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_95.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_96.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_96.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_97.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_97.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_98.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_98.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_99.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/TileMap/grass tileset_99.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/egg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/egg.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/egg.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/egg.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +373,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Ramo-Dreams/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ramo-Dreams/Assets/Scripts/Player/PlayerShoot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mete/Scripts/Ground/GroundCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mete/Scripts/MainUI/MainPageController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerShooter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
