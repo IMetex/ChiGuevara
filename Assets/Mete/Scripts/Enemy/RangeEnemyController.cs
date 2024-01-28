@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Mete.Scripts.Enemy;
+using UnityEngine;
 
 namespace Mete.Scripts
 {

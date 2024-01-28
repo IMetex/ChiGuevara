@@ -49,8 +49,8 @@ namespace Mete.Scripts
                 }
             }
 
-            if (enemyPatrol != null)
-                enemyPatrol.enabled = !PlayerInSight();
+            /*if (enemyPatrol != null)
+                enemyPatrol.enabled = !PlayerInSight();*/
         }
 
         private bool PlayerInSight()

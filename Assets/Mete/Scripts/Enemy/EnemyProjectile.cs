@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mete.Scripts
+namespace Mete.Scripts.Enemy
 {
     public class EnemyProjectile : EnemyDamage
     {
