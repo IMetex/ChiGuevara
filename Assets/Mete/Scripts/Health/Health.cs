@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Mete.Scripts.Health
@@ -14,6 +15,8 @@ namespace Mete.Scripts.Health
         public bool isDead; // GameOver
         public float currentHealth { get; private set; }
 
+        public SpriteRenderer _Sprite;
+
         private void Awake()
         {
             currentHealth = startingHealt;
@@ -28,17 +31,15 @@ namespace Mete.Scripts.Health
             if (currentHealth > 0)
             {
                 // player hit
-                animator.SetTrigger("IsHurt");
+                StartCoroutine(FlashSpriteColor(Color.red, 0.5f));
             }
             else
             {
                 if (!isDead)
                 {
-                    animator.SetTrigger("IsDead");
-
-                    //Deactivate all attached component classes
-                    /*foreach (Behaviour component in components)
-                    component.enabled = false;*/
+                //    animator.SetTrigger("IsDead");
+                
+                    Destroy(gameObject);
 
                     isDead = true;
                 }
@@ -46,10 +47,13 @@ namespace Mete.Scripts.Health
 
         }
 
-        public void AddHealth(float _value)
+        private IEnumerator FlashSpriteColor(Color flashColor, float duration)
         {
-            // Collect Heart 
-            currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealt);
+            _Sprite.color = flashColor;
+            
+            yield return new WaitForSeconds(duration);
+            
+            _Sprite.color = Color.white;
         }
     }
 }

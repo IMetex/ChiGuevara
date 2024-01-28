@@ -12,18 +12,16 @@ namespace Mete.Scripts.Enemy
 
         private Animator _animator;
         private MeleEnemyController _meleEnemyController;
-        private EnemyPatrol _enemyPatrol;
-        private bool isFollowing = false;
 
         private void Start()
         {
             _animator = GetComponent<Animator>();
             _meleEnemyController = GetComponent<MeleEnemyController>();
-            _enemyPatrol = GetComponentInParent<EnemyPatrol>();
             _playerReference = GameObject.FindGameObjectWithTag(PlayerTag)?.transform;
         }
 
 
+      
         void Update()
         {
             if (_playerReference == null)
@@ -33,30 +31,23 @@ namespace Mete.Scripts.Enemy
 
             if (distanceToPlayer <= detectionRadius && distanceToPlayer > minDistanceToPlayer)
             {
-                if (!isFollowing)
-                {
-                    isFollowing = true;
-                    _animator.SetBool("IsMoving", true);
-                }
+                _animator.SetBool("IsMoving", true);
 
-                _enemyPatrol.enabled = false;
-                Vector2 direction = new Vector2(_playerReference.position.x - transform.position.x, 0f).normalized;
+                Vector2 direction = (_playerReference.position - transform.position).normalized;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                transform.position =
-                    Vector3.MoveTowards(transform.position, _playerReference.position, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, _playerReference.position,
+                    speed * Time.deltaTime);
+
+                // Set Y rotation to zero to prevent rotation around Y-axis
                 transform.rotation = Quaternion.Euler(0, angle, 0);
             }
             else
             {
-                _enemyPatrol.enabled = true;
-                if (isFollowing)
-                {
-                    isFollowing = false;
-                    _animator.SetBool("IsMoving", false);
-                }
+                _animator.SetBool("IsMoving", false);
             }
         }
+
 
         void OnDrawGizmos()
         {
