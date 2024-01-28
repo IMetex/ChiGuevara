@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer sprite;
     public Transform _spawnPos;
     public float attackCooldown;
+    public float minXPosition = -10f;
+    public float maxXPosition = 10f;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Sağa ve sola hareket
         float horizontalInput = Input.GetAxis("Horizontal");
+        
         Vector2 moveDirection = new Vector2(horizontalInput, 0f);
 
         if (horizontalInput > 0 || horizontalInput < 0)
@@ -52,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         // Normal hareket veya dash hareketi
         float currentMoveSpeed = canDash ? dashSpeed : moveSpeed;
         transform.Translate(moveDirection * (currentMoveSpeed * Time.deltaTime));
+        
 
         // Ateş etme
         if (Input.GetKey(KeyCode.Space) && canFire)

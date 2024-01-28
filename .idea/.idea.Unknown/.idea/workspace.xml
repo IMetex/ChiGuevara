@@ -5,20 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a19bd7-5580-4dc9-ab6c-48286a12b36c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/bg2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/eggs.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/grasss.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Spawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Spawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/EGG/New Animation.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/EGG/New Animation.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/New Animation.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/New Animation.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/lnot_8zkh_170209.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/lnot_8zkh_170209.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/PageController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/PageController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Default.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/UI/Hover.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy_1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy_1.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/EGG/fireEGG.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/EGG/fireEGG.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer2/Farmer2.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer2/Farmer2.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/attack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/attack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/walk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer2/walk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/bg2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/bg2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/eggs.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/grasss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/grasss.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sc/BulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sc/BulletScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

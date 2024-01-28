@@ -11,8 +11,10 @@ public class BulletScript : MonoBehaviour
 
     private float direction;
 
+    private Animator _animator;
     void Start()
     {
+        _animator = GetComponent<Animator>();
         Destroy(gameObject, destroyTime);
     }
 
@@ -44,7 +46,7 @@ public class BulletScript : MonoBehaviour
                 enemyHealth.TakeDamage(1); 
             }
 
-            // animation 
+           _animator.SetTrigger("Explosion");
             
             Destroy(gameObject); // Destroy the bullet upon hitting an enemy
         }
