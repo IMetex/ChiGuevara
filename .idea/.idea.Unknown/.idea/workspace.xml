@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a19bd7-5580-4dc9-ab6c-48286a12b36c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Prefabs/MeleEnemyParent.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Prefabs/UI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Mete/Prefabs/UI.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/bg2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/egg3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/eggs.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/eggs/grasss.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Spawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Spawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unknown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Chicken/Chicken.controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer1/Farmer1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer1/Farmer1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer1/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Farmer1/attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer1/idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Enemies/farmer1/idle.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scene/MeteTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scene/MeteTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/EnemyFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/MeleEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Enemy/MeleEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Prefabs/MeleEnemyParent.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground/GroundCheck.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Ground/GroundCheck.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Health/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerShooter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mete/Scripts/Player/PlayerShooter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/egg.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/egg.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mete/UI/grass tileset.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

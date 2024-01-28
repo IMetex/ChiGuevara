@@ -1,5 +1,7 @@
 // BulletScript.cs
 
+using System;
+using Mete.Scripts.Health;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -30,5 +32,21 @@ public class BulletScript : MonoBehaviour
     {
         Vector3 movement = new Vector3(direction, 0f, 0f) * bulletSpeed * Time.deltaTime;
         transform.Translate(movement);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Health enemyHealth = other.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(1); 
+            }
+
+            // animation 
+            
+            Destroy(gameObject); // Destroy the bullet upon hitting an enemy
+        }
     }
 }
