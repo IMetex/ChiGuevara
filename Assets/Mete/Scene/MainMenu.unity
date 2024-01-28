@@ -1822,7 +1822,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Shoot                :  Mouse Left
+  m_text: 'Shoot                :  Space + Arrow
+
 
 '
   m_isRightToLeft: 0
