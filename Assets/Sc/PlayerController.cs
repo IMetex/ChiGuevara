@@ -1,11 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public float dashSpeed = 15f; // Dash hızı
+    public float dashDuration = 0.2f; // Dash süresi
     private bool isJumping = false;
     private int jumpCount = 0;
+    private bool canDash = true; // Dash yapma izni kontrolü
     public GameObject bulletPrefab; // Ateş objesi prefab'ı
     public float minYPosition = -5f; // Alt sınır
 
@@ -16,10 +20,19 @@ public class PlayerController : MonoBehaviour
         // Sağa ve sola hareket
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 moveDirection = new Vector2(horizontalInput, 0f);
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+
+        // Dash kontrolü
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+
+        // Normal hareket veya dash hareketi
+        float currentMoveSpeed = canDash ? dashSpeed : moveSpeed;
+        transform.Translate(moveDirection * currentMoveSpeed * Time.deltaTime);
 
         // Ateş etme
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && canFire)
         {
             // Yatay gidişatı belirle (sağa veya sola)
             float bulletDirection = 0f;
@@ -32,13 +45,13 @@ public class PlayerController : MonoBehaviour
                 bulletDirection = 1f; // Sağa ateş et
             }
 
-            if (bulletDirection != 0f && canFire)
+            if (bulletDirection != 0f)
             {
                 Fire(bulletDirection);
                 canFire = false; // Fire yapıldığında izni kapat
 
-                // 2 saniye sonra izni tekrar aç
-                Invoke("EnableFire", 1f);
+                // 0.5 saniye sonra izni tekrar aç
+                Invoke("EnableFire", 0.5f);
             }
         }
 
@@ -92,5 +105,22 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
             jumpCount = 0;
         }
+    }
+
+    IEnumerator Dash()
+    {
+        canDash = false; // Dash iznini kapat
+        float originalSpeed = moveSpeed; // Orijinal hareket hızını sakla
+
+        // Dash süresince hızı arttır
+        moveSpeed = dashSpeed;
+
+        // Dash süresi boyunca beklet
+        yield return new WaitForSeconds(dashDuration);
+
+        // Dash sona erdiğinde hızı eski değerine geri getir
+        moveSpeed = originalSpeed;
+
+        canDash = true; // Dash iznini aç
     }
 }
