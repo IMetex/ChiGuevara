@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Mete/Scene/MainMenu.unity
     guid: 0750f357eab106f4dab73c2fc5c2686b
   - enabled: 1
-    path: Assets/Mete/Scene/MeteTest.unity
-    guid: ec82ad70e86b4bf4f90135467559d308
+    path: Assets/Mete/Scene/Level1.unity
+    guid: f2580f8b049664746af1a55a2ac28063
   m_configObjects: {}

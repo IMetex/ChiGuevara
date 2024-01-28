@@ -4121,6 +4121,7 @@ MonoBehaviour:
   attackCooldown: 1
   minXPosition: -10
   maxXPosition: 10
+  fireSound: {fileID: 8300000, guid: 6006d2ddeade36a468125bb97ea706d7, type: 3}
 --- !u!50 &1334204459
 Rigidbody2D:
   serializedVersion: 4
@@ -4803,7 +4804,7 @@ MonoBehaviour:
   spawnableObjects:
   - {fileID: 1929768813802834078, guid: 2262bfe822417854b842c802e3aa91b3, type: 3}
   initialSpawnTime: 3
-  minSpawnTime: 0.5
+  minSpawnTime: 2
   spawnTimeDecreaseRate: 0.1
 --- !u!4 &1557877492
 Transform:
@@ -6075,7 +6076,7 @@ MonoBehaviour:
   spawnableObjects:
   - {fileID: 1929768813802834078, guid: 2262bfe822417854b842c802e3aa91b3, type: 3}
   initialSpawnTime: 3
-  minSpawnTime: 0.5
+  minSpawnTime: 2
   spawnTimeDecreaseRate: 0.1
 --- !u!4 &2092156803
 Transform:

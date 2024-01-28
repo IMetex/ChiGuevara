@@ -21,17 +21,21 @@ public class PlayerMovement : MonoBehaviour
     public float attackCooldown;
     public float minXPosition = -10f;
     public float maxXPosition = 10f;
+    
+    public AudioClip fireSound; // Ateş sesi
+    private AudioSource audioSource; // AudioSource bileşeni
 
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>(); // AudioSource bileşenini al
     }
 
     void Update()
     {
         // Sağa ve sola hareket
         float horizontalInput = Input.GetAxis("Horizontal");
-        
+
         Vector2 moveDirection = new Vector2(horizontalInput, 0f);
 
         if (horizontalInput > 0 || horizontalInput < 0)
@@ -55,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         // Normal hareket veya dash hareketi
         float currentMoveSpeed = canDash ? dashSpeed : moveSpeed;
         transform.Translate(moveDirection * (currentMoveSpeed * Time.deltaTime));
-        
 
         // Ateş etme
         if (Input.GetKey(KeyCode.Space) && canFire)
@@ -77,6 +80,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 Fire(bulletDirection);
                 canFire = false; // Fire yapıldığında izni kapat
+
+                // Ses çal
+                PlayFireSound();
 
                 // 0.5 saniye sonra izni tekrar aç
                 Invoke("EnableFire", attackCooldown);
@@ -111,7 +117,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Fire(float bulletDirection)
     {
-        
         GameObject bullet = Instantiate(bulletPrefab, _spawnPos.position, Quaternion.identity);
         BulletScript bulletScript = bullet.GetComponent<BulletScript>();
 
@@ -122,16 +127,6 @@ public class PlayerMovement : MonoBehaviour
     void EnableFire()
     {
         canFire = true; // Fire iznini aç
-    }
-
-    // Zeminle temas ettiğinde
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Graund"))
-        {
-            isJumping = false;
-            jumpCount = 0;
-        }
     }
 
     IEnumerator Dash()
@@ -149,5 +144,13 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = originalSpeed;
 
         canDash = true; // Dash iznini aç
+    }
+
+    void PlayFireSound()
+    {
+        if (fireSound != null)
+        {
+            audioSource.PlayOneShot(fireSound); // Ateş sesini çal
+        }
     }
 }
